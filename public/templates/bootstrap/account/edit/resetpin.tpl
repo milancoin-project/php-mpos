@@ -12,7 +12,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="form-group">
-              <label>Current Password</label>
+              <label>Current Password (登陆密码)</label>
               <input class="form-control" type="password" name="currentPassword">
             </div>
           </div>

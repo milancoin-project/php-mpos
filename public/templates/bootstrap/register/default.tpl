@@ -17,12 +17,12 @@
       </div>
       <div class="panel-body">
         <div class="form-group">
-          <label>Username</label>
+          <label>Username(用户名)</label>
           <div class="input-group  input-group-sm">
             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
             <input type="text" class="form-control" name="username" placeholder="Username" value="{$smarty.post.username|escape|default:""}" size="15" maxlength="20" required>
           </div>
-          <label>Password</label> (<span id="pw_strength">Strength</span>)
+          <label>Password (密码,登陆时使用)</label> (<span id="pw_strength">Strength</span>)
           <div class="input-group input-group-sm">
             <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
             <input type="password" class="form-control" name="password1" placeholder="Password" value="" size="15" maxlength="100" id="pw_field" required>
@@ -32,7 +32,7 @@
             <span class="input-group-addon" id="pw_match"><i class="fa fa-key fa-fw"></i></span>
             <input type="password" class="form-control" name="password2" placeholder="Repeat Password" value="" size="15" maxlength="100" id="pw_field2" required>
           </div>
-          <label>Email</label>
+          <label>Email (邮箱,登陆时使用)</label>
           <div class="input-group input-group-sm">
             <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
             <input type="text" name="email1" placeholder="Email" class="form-control" value="{$smarty.post.email1|escape|default:""}" size="15" required>
@@ -42,14 +42,14 @@
             <input type="text" class="form-control" name="email2" placeholder="Repeat Email" value="{$smarty.post.email2|escape|default:""}" size="15" required>
           </div>
           <label>PIN</label>
-          <font size="1">Four digit number. <b>Remember this pin!</b></font>
+          <font size="1">Four digit number. <b>Remember this pin!</b> (4位数PIN码,非常重要,请牢记!)</font>
           <div class="input-group input-group-sm">
             <span class="input-group-addon"><i class="fa fa-shield fa-fw"></i></span>
             <input type="password" class="form-control" name="pin" placeholder="PIN" value="" size="4" maxlength="4" required>   
           </div>
           <div class="input-group input-group-sm">
             <label>
-              <input type="checkbox" value="1" name="tac" id="tac"> I Accept The <a data-toggle="modal" data-target="#TAC">Terms and Conditions</a>
+              <input type="checkbox" value="1" name="tac" id="tac"> I Accept The <a data-toggle="modal" data-target="#TAC">Terms and Conditions (同意协议)</a>
             </label>
           </div>
         </div>

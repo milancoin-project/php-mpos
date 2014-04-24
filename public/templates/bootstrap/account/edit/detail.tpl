@@ -31,30 +31,30 @@
               {nocache}<input class="form-control" type="text" name="email" value="{$GLOBAL.userdata.email|escape}" size="20" {if $GLOBAL.twofactor.enabled && $GLOBAL.twofactor.options.details && !$DETAILSUNLOCKED}id="disabledInput" disabled{/if}/>{/nocache}
             </div>
             <div class="form-group">
-              <label>Payment Address</label>
+              <label>Payment Address (钱包帐号)</label>
               {nocache}<input class="form-control" type="text" name="paymentAddress" value="{$smarty.request.paymentAddress|default:$GLOBAL.userdata.coin_address|escape}" size="40"  {if $GLOBAL.twofactor.enabled && $GLOBAL.twofactor.options.details && !$DETAILSUNLOCKED}id="disabledInput" disabled{/if}/>{/nocache}
             </div>
             <div class="form-group">
-              <label>Donation Percentage</label>
+              <label>Donation Percentage(捐赠比例)</label>
               <font size="1"> Donation amount in percent ({$DONATE_THRESHOLD.min} - 100%)</font>
               {nocache}<input class="form-control" type="text" name="donatePercent" value="{$smarty.request.donatePercent|default:$GLOBAL.userdata.donate_percent|escape|number_format:"2"}" size="4" {if $GLOBAL.twofactor.enabled && $GLOBAL.twofactor.options.details && !$DETAILSUNLOCKED}id="disabledInput" disabled{/if}/>{/nocache}
             </div>
             <div class="form-group">
-              <label>Automatic Payout Threshold</label>
+              <label>Automatic Payout Threshold (设置自动转帐,默认0为手动)</label>
               </br>
               <font size="1">{$GLOBAL.config.ap_threshold.min} - {$GLOBAL.config.ap_threshold.max} {$GLOBAL.config.currency}. Set to '0' for no auto payout. A {if $GLOBAL.config.txfee_auto > 0.00001}{$GLOBAL.config.txfee_auto}{else}{$GLOBAL.config.txfee_auto|number_format:"8"}{/if} {$GLOBAL.config.currency} TX fee will apply <span id="tt"><img width="15px" height="15px" title="This {if $GLOBAL.config.txfee_auto > 0.00001}{$GLOBAL.config.txfee_auto}{else}{$GLOBAL.config.txfee_auto|number_format:"8"}{/if} automatic payment transaction fee is a network fee and goes back into the network not the pool." src="site_assets/mpos/images/questionmark.png"></span></font>
               </br>
               <input class="form-control" type="text" name="payoutThreshold" value="{nocache}{$smarty.request.payoutThreshold|default:$GLOBAL.userdata.ap_threshold|escape}{/nocache}" size="{$GLOBAL.config.ap_threshold.max|strlen}" maxlength="{$GLOBAL.config.ap_threshold.max|strlen}" {if $GLOBAL.twofactor.enabled && $GLOBAL.twofactor.options.details && !$DETAILSUNLOCKED}id="disabledInput" disabled{/if}/>
             </div>
             <div class="form-group">
-              <label>Anonymous Account</label>
+              <label>Anonymous Account (是否隐藏用户名)</label>
               <input type="hidden" name="is_anonymous" value="0" />
               <input type="checkbox" class="switch" data-size="mini"  name="is_anonymous" id="is_anonymous" value="1" {if $GLOBAL.userdata.is_anonymous}checked{/if} {if $GLOBAL.twofactor.enabled && $GLOBAL.twofactor.options.details && !$DETAILSUNLOCKED}id="disabledInput" disabled{/if}/>
               </br>
               <font size="1">Hide username on website from others. Admins can still get your user information.</font>
             </div>
             <div class="form-group">
-              <label>4 Digit PIN</label>
+              <label>4 Digit PIN (注册时所填PIN码)</label>
               <font size="1">The 4 digit PIN you chose when registering</font>
               <input class="form-control" type="password" name="authPin" size="4" maxlength="4">
             </div>

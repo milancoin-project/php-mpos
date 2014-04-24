@@ -20,15 +20,15 @@
               </p>
             </div>
             <div class="form-group">
-              <label>Account Balance</label>
+              <label>Account Balance (转帐或提现数量)</label>
               {nocache}<input class="form-control" id="disabledInput" type="text" value="{$GLOBAL.userdata.balance.confirmed|escape}" {$GLOBAL.config.currency} disabled />{/nocache}
             </div>
             <div class="form-group">
-              <label>Payout to</label>
+              <label>Payout to (钱包帐号)</label>
               {nocache}<input class="form-control" id="disabledInput" type="text" value="{$GLOBAL.userdata.coin_address|escape}" disabled />{/nocache}
             </div>
             <div class="form-group">
-              <label>4 Digit PIN</label>
+              <label>4 Digit PIN (PIN码)</label>
               <input class="form-control" type="password" name="authPin" size="4" maxlength="4" />
             </div>
           </div>

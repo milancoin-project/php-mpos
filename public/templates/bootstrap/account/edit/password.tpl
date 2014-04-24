@@ -17,21 +17,21 @@
               </p>
             </div>
             <div class="form-group">
-              <label>Current Password</label>
+              <label>Current Password (原密码)</label>
               {nocache}<input class="form-control" type="password" name="currentPassword" {if $GLOBAL.twofactor.enabled && $GLOBAL.twofactor.options.changepw && !$CHANGEPASSUNLOCKED}id="disabledInput" disabled{/if}/>{/nocache}
             </div>
             <div class="form-group">
-              <label>New Password</label>
+              <label>New Password (新密码)</label>
               <p style="padding-right:10px;display:block;margin-top:0px;float:right;color:#999;" id="pw_strength"></p>
               {nocache}<input class="form-control" type="password" name="newPassword" id="pw_field"{if $GLOBAL.twofactor.enabled && $GLOBAL.twofactor.options.changepw && !$CHANGEPASSUNLOCKED}id="disabledInput" disabled{/if}/>{/nocache}
             </div>
             <div class="form-group">
-              <label>Repeat New Password</label>
+              <label>Repeat New Password (重新输入新密码)</label>
               <p style="padding-right:10px;display:block;margin-top:0px;float:right;" id="pw_match"></p>
               {nocache}<input class="form-control" type="password" name="newPassword2" id="pw_field2"{if $GLOBAL.twofactor.enabled && $GLOBAL.twofactor.options.changepw && !$CHANGEPASSUNLOCKED}id="disabledInput" disabled{/if}/>{/nocache}
             </div>
             <div class="form-group">
-              <label>4 Digit PIN</label>
+              <label>4 Digit PIN (PIN码)</label>
               <input class="form-control" type="password" name="authPin" size="4" maxlength="4" />
             </div>
 
